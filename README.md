@@ -11,3 +11,5 @@
 ## flutter_cupertino_test
 Apple의 iOS 운영 체제의 디자인 가이드라인을 따르는 Flutter의 여러가지 위젯을 다뤄보는 샘플 프로젝트
 
+## flutter_widget_test
+기본적인 Flutter의 위젯을 다루는 샘플 프로젝트
