@@ -23,3 +23,7 @@ https://luvris2.tistory.com/671
 뒤로가기 버튼의 기능을 재정의하고
 앱 전반에 뒤로가기 버튼의 기능을 적용할 수 있도록 하는 프로젝트
 https://luvris2.tistory.com/772
+
+## flutter_navigator_test
+Navigator 클래스를 활용하여 페이지 이동 메소드들을 알아보는 샘플 프로젝트
+https://luvris2.tistory.com/796
