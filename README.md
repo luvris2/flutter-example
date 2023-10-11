@@ -27,3 +27,7 @@ https://luvris2.tistory.com/772
 ## flutter_navigator_test
 Navigator 클래스를 활용하여 페이지 이동 메소드들을 알아보는 샘플 프로젝트
 https://luvris2.tistory.com/796
+
+## flutter_inappwebview_test
+웹 페이지를 보여주는 웹뷰 라이브러리인 inAppWebView를 사용하여 웹 페이지를 표시하는 샘플 프로젝트
+https://luvris2.tistory.com/797
