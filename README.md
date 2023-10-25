@@ -31,3 +31,8 @@ https://luvris2.tistory.com/796
 ## flutter_inappwebview_test
 웹 페이지를 보여주는 웹뷰 라이브러리인 inAppWebView를 사용하여 웹 페이지를 표시하는 샘플 프로젝트
 https://luvris2.tistory.com/797
+
+## flutter_inappwebview_popup_test
+웹 페이지에서 팝업 제어를 위한 샘플 프로젝트
+최종적으로는 웹에서 개발된 소셜 로그인 기능을 이용하기 위함 (하이브리드앱)
+https://luvris2.tistory.com/802
