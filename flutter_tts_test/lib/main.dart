@@ -25,7 +25,7 @@ class _MyTtsState extends State<MyTts> {
     중국어    =   "zh-CN"
     프랑스어  =   "fr-FR"
   */
-  String language = "fr-FR";
+  String language = "ko-KR";
   //String engine = ;
   double volume = 3.0;
   double pitch = 1.4;
@@ -49,6 +49,7 @@ class _MyTtsState extends State<MyTts> {
     flutterTts.setPitch(pitch);
     flutterTts.setSpeechRate(rate);
     flutterTts.setVolume(volume);
+
     //flutterTts.setVoice({"name": "ko-KR-Neural2-C", "locale": "ko-KR"});
   }
 
@@ -72,6 +73,26 @@ class _MyTtsState extends State<MyTts> {
     flutterTts.speak(voiceText);
   }
 
+  Future<List<dynamic>> getTtsOptions() async {
+    List<Object?> objVoices = await flutterTts.getVoices;
+    List<String> ttsVoices = [];
+    for (var item in objVoices) {
+      if (item.toString().contains('ko')) {
+        ttsVoices.add(item.toString());
+      }
+    }
+
+    List<Object?> objLanguages = await flutterTts.getLanguages;
+    List<String> ttsLanguages = [];
+    for (var item in objLanguages) {
+      if (item.toString().contains('ko')) {
+        ttsLanguages.add(item.toString());
+      }
+    }
+
+    return [ttsVoices, ttsLanguages];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(child: _buildMain());
@@ -81,6 +102,9 @@ class _MyTtsState extends State<MyTts> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        // TTS 옵션 선택 영역
+        _ttsOptionArea(),
+
         TextField(
           controller: textEditingController,
         ),
@@ -94,8 +118,54 @@ class _MyTtsState extends State<MyTts> {
             onPressed: () {
               _speak(textEditingController.text);
             },
-            child: const Text('sdf'))
+            child: const Text('sdf')),
+        ElevatedButton(onPressed: () {}, child: const Text('getOptions'))
       ],
     );
   }
+
+  // Widget _ttsOptionArea() {
+  //   String selectedVoice = "name: ko-kr-x-ism-local, locale: ko-KR";
+  //   String selectedLanguage = "";
+  //   return FutureBuilder(
+  //     future: getTtsOptions(),
+  //     builder: ((context, snapshot) {
+  //       if (snapshot.connectionState == ConnectionState.waiting) {
+  //         // 데이터를 기다리는 동안 로딩 스피너나 다른 대기 UI를 표시할 수 있습니다.
+  //         return const Center(
+  //           child: CircularProgressIndicator(),
+  //         );
+  //       } else if (snapshot.hasError) {
+  //         // 에러 처리
+  //         return Center(
+  //           child: Text('Error: ${snapshot.error}'),
+  //         );
+  //       } else {
+  //         // Future에서 얻은 데이터를 사용하여 화면을 빌드합니다.
+  //         final List ttsData = snapshot.data!.toList();
+  //         final List<String> ttsVoices = ttsData[0];
+  //         final List<String> ttsEngines = ttsData[1];
+  //         //final List<String> ttsLanguages = ttsData[2];
+
+  //         return Row(
+  //           mainAxisAlignment: MainAxisAlignment.center,
+  //           children: [
+  //             const Text("TTS 옵션 선택"),
+  //             DropdownButton(
+  //                 value: ttsEngines,
+  //                 items: ttsVoices.map<DropdownMenuItem<String>>((value) {
+  //                   return DropdownMenuItem<String>(
+  //                       value: value, child: Text(value));
+  //                 }).toList(),
+  //                 onChanged: (String value) {
+  //                   setState(() {
+  //                     selectedVoice = value;
+  //                   });
+  //                 }),
+  //           ],
+  //         );
+  //       }
+  //     }),
+  //   );
+  // }
 }
