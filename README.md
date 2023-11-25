@@ -43,3 +43,7 @@ https://luvris2.tistory.com/802
 https://luvris2.tistory.com/805  
 > ### TextEditingController 사용 방법
 https://luvris2.tistory.com/806  
+
+## flutter_tts_test
+디바이스 내에서 사용할 수 있는 tts 엔진을 이용하여 텍스트를 글자로 읽어주는 기능을 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/807  
