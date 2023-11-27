@@ -26,31 +26,41 @@ class _MyTtsState extends State<MyTts> {
     프랑스어  =   "fr-FR"
   */
   String language = "ko-KR";
-  //String engine = ;
-  double volume = 3.0;
-  double pitch = 1.4;
-  double rate = 0.3;
 
+  /* 음성 설정
+    한국어 여성 {"name": "ko-kr-x-ism-local", "locale": "ko-KR"}
+	  영어 여성 {"name": "en-us-x-tpf-local", "locale": "en-US"}
+    일본어 여성 {"name": "ja-JP-language", "locale": "ja-JP"}
+    중국어 여성 {"name": "cmn-cn-x-ccc-local", "locale": "zh-CN"}
+    중국어 남성 {"name": "cmn-cn-x-ccd-local", "locale": "zh-CN"}
+*/
+  Map<String, String> voice = {"name": "ko-kr-x-ism-local", "locale": "ko-KR"};
+  String engine = "com.google.android.tts";
+  double volume = 0.8;
+  double pitch = 1.0;
+  double rate = 0.5;
+
+  // 사용자의 입력 값을 받을 컨트롤러
   final TextEditingController textEditingController = TextEditingController();
-
-  bool isToggled = false;
 
   @override
   void initState() {
     super.initState();
 
+    // TTS 초기 설정
     initTts();
   }
 
+  // TTS 초기 설정
   initTts() async {
     await initTtsIosOnly(); // iOS 설정
 
     flutterTts.setLanguage(language);
+    flutterTts.setVoice(voice);
+    flutterTts.setEngine(engine);
+    flutterTts.setVolume(volume);
     flutterTts.setPitch(pitch);
     flutterTts.setSpeechRate(rate);
-    flutterTts.setVolume(volume);
-
-    //flutterTts.setVoice({"name": "ko-KR-Neural2-C", "locale": "ko-KR"});
   }
 
   // TTS iOS 옵션
@@ -69,103 +79,27 @@ class _MyTtsState extends State<MyTts> {
         IosTextToSpeechAudioMode.voicePrompt);
   }
 
+  // TTS로 읽어주기
   Future _speak(voiceText) async {
     flutterTts.speak(voiceText);
   }
 
-  Future<List<dynamic>> getTtsOptions() async {
-    List<Object?> objVoices = await flutterTts.getVoices;
-    List<String> ttsVoices = [];
-    for (var item in objVoices) {
-      if (item.toString().contains('ko')) {
-        ttsVoices.add(item.toString());
-      }
-    }
-
-    List<Object?> objLanguages = await flutterTts.getLanguages;
-    List<String> ttsLanguages = [];
-    for (var item in objLanguages) {
-      if (item.toString().contains('ko')) {
-        ttsLanguages.add(item.toString());
-      }
-    }
-
-    return [ttsVoices, ttsLanguages];
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Center(child: _buildMain());
-  }
-
-  Widget _buildMain() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // TTS 옵션 선택 영역
-        _ttsOptionArea(),
-
-        TextField(
-          controller: textEditingController,
-        ),
-        Container(height: 50),
-        const Row(
-          children: [
-            //ToggleButtons(isSelected: isToggled, children: const Text('sdf'))
-          ],
-        ),
-        ElevatedButton(
-            onPressed: () {
-              _speak(textEditingController.text);
-            },
-            child: const Text('sdf')),
-        ElevatedButton(onPressed: () {}, child: const Text('getOptions'))
-      ],
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextField(
+            controller: textEditingController,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                _speak(textEditingController.text);
+              },
+              child: const Text('내용 읽기')),
+        ],
+      ),
     );
   }
-
-  // Widget _ttsOptionArea() {
-  //   String selectedVoice = "name: ko-kr-x-ism-local, locale: ko-KR";
-  //   String selectedLanguage = "";
-  //   return FutureBuilder(
-  //     future: getTtsOptions(),
-  //     builder: ((context, snapshot) {
-  //       if (snapshot.connectionState == ConnectionState.waiting) {
-  //         // 데이터를 기다리는 동안 로딩 스피너나 다른 대기 UI를 표시할 수 있습니다.
-  //         return const Center(
-  //           child: CircularProgressIndicator(),
-  //         );
-  //       } else if (snapshot.hasError) {
-  //         // 에러 처리
-  //         return Center(
-  //           child: Text('Error: ${snapshot.error}'),
-  //         );
-  //       } else {
-  //         // Future에서 얻은 데이터를 사용하여 화면을 빌드합니다.
-  //         final List ttsData = snapshot.data!.toList();
-  //         final List<String> ttsVoices = ttsData[0];
-  //         final List<String> ttsEngines = ttsData[1];
-  //         //final List<String> ttsLanguages = ttsData[2];
-
-  //         return Row(
-  //           mainAxisAlignment: MainAxisAlignment.center,
-  //           children: [
-  //             const Text("TTS 옵션 선택"),
-  //             DropdownButton(
-  //                 value: ttsEngines,
-  //                 items: ttsVoices.map<DropdownMenuItem<String>>((value) {
-  //                   return DropdownMenuItem<String>(
-  //                       value: value, child: Text(value));
-  //                 }).toList(),
-  //                 onChanged: (String value) {
-  //                   setState(() {
-  //                     selectedVoice = value;
-  //                   });
-  //                 }),
-  //           ],
-  //         );
-  //       }
-  //     }),
-  //   );
-  // }
 }
