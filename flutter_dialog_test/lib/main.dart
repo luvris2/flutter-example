@@ -6,7 +6,10 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         body: SafeArea(
+          // showDialog 샘플
           child: MainPage(),
+          // showDialog 내에서 setState 샘플
+          // child: MainPage2(),
         ),
       ),
     ),

@@ -36,7 +36,6 @@ class _MainPageState extends State<MainPage2> {
 
   Future<void> _dialogBuilder() {
     return showDialog<void>(
-      //barrierColor: Colors.red,
       context: context,
       builder: (context) {
         return StatefulBuilder(builder: (context, setState) {
