@@ -37,6 +37,10 @@ https://luvris2.tistory.com/797
 최종적으로는 웹에서 개발된 소셜 로그인 기능을 이용하기 위함 (하이브리드앱)  
 https://luvris2.tistory.com/802  
 
+## flutter_inappwebview_communication_test
+인앱웹뷰를 통해 웹과 앱 서로 데이터를 주고 받기 위한 샘플 프로젝트  
+https://luvris2.tistory.com/818  
+
 ## flutter_how_to_use_widgets_example
 플러터의 위젯에 대한 사용 방법과 샘플 코드를 통해 직접 구현해보는 프로젝트  
 > ### Dropdown Button 사용 방법  
@@ -47,3 +51,11 @@ https://luvris2.tistory.com/806
 ## flutter_tts_test
 디바이스 내에서 사용할 수 있는 tts 엔진을 이용하여 텍스트를 글자로 읽어주는 기능을 구현해보는 샘플 프로젝트  
 https://luvris2.tistory.com/807  
+
+## flutter_dialog_test
+다이얼로그를 사용하는 방법을 설명하는 기본 샘플 프로젝트 (MainPage)  
+https://luvris2.tistory.com/816  
+다이얼로그 내에서 값의 업데이트(상태변환)를 하기 위해  
+StatefulBuilder와 StatefulWidget을 사용해보는 샘플 프로젝트(MainPage2)  
+https://luvris2.tistory.com/817  
+
