@@ -62,3 +62,8 @@ https://luvris2.tistory.com/817
 ## flutter_webview_devtools_test
 웹앱으로 구성된 하이브리드앱에서 웹 페이지를 디버깅하는 방법을 설명하기 위한 프로젝트  
 https://luvris2.tistory.com/821  
+
+## flutter_carousel_slider_test  
+캐러셀 슬라이드를 이용하여 페이지가 슬라이드 되는 UI를 구성하고  
+캐러셀 인디케이트를 구현하여 현재 페이지의 확인 및 특정 페이지로 빠르게 이동할수 있는 기능을 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/824
