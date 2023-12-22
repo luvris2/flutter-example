@@ -66,4 +66,9 @@ https://luvris2.tistory.com/821
 ## flutter_carousel_slider_test  
 캐러셀 슬라이드를 이용하여 페이지가 슬라이드 되는 UI를 구성하고  
 캐러셀 인디케이트를 구현하여 현재 페이지의 확인 및 특정 페이지로 빠르게 이동할수 있는 기능을 구현해보는 샘플 프로젝트  
-https://luvris2.tistory.com/824
+https://luvris2.tistory.com/824  
+
+## flutter_class_parameter_value_exchange
+상태 관리 패키지를 사용하지 않고 다른 클래스 간 상태를 공유하고,  
+상태값이 변경되면 연결된 다른 클래스의 상태값을 setState를 이용하여 업데이트하는 것을 직접 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/825  
