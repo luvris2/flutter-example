@@ -72,3 +72,8 @@ https://luvris2.tistory.com/824
 상태 관리 패키지를 사용하지 않고 다른 클래스 간 상태를 공유하고,  
 상태값이 변경되면 연결된 다른 클래스의 상태값을 setState를 이용하여 업데이트하는 것을 직접 구현해보는 샘플 프로젝트  
 https://luvris2.tistory.com/825  
+
+## flutter_radar_chart_test
+flutter_radar_chart 패키지를 이용하여 레이더 차트를 그려보고  
+레이더 차트의 색상 및 글꼴, 축 표시 방법 등을 커스터마이징하여 사용 방법을 익히는 샘플 프로젝트  
+https://luvris2.tistory.com/837  
