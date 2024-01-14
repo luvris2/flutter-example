@@ -77,3 +77,9 @@ https://luvris2.tistory.com/825
 flutter_radar_chart 패키지를 이용하여 레이더 차트를 그려보고  
 레이더 차트의 색상 및 글꼴, 축 표시 방법 등을 커스터마이징하여 사용 방법을 익히는 샘플 프로젝트  
 https://luvris2.tistory.com/837  
+
+## flutter_color_picker_example  
+flutter_colorpicker 패키지를 이용하여 색상 편집기를 구현하고,  
+색상 편집기를 통해 사용자가 여러 가지의 색상을 선택 및 색상값을 업데이트하여  
+사용자가 선택한 색상을 메인 페이지에 표시하는 기능을 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/842  
