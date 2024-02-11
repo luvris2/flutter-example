@@ -89,5 +89,5 @@ flutter_colorpicker 패키지를 이용하여 색상 편집기를 구현하고,
 https://luvris2.tistory.com/842  
 
 ## flutter_partition_screen_move_example
-특정 영역의 화면만 이동하는 방법을 설명하기 위한 샘플 프로젝트  
-https://luvris2.tistory.com/858  
+한 화면에 여러 영역으로 구성된 페이지에서 특정 영역의 화면만 전환하는 방법을 설명하기 위한 샘플 프로젝트  
+https://luvris2.tistory.com/859  
