@@ -24,9 +24,13 @@ https://luvris2.tistory.com/671
 앱 전반에 뒤로가기 버튼의 기능을 적용할 수 있도록 하는 프로젝트  
 https://luvris2.tistory.com/772  
 
-## flutter_navigator_test
+## Flutter Navigator
+### flutter_navigator_test
 Navigator 클래스를 활용하여 페이지 이동 메소드들을 알아보는 샘플 프로젝트  
-https://luvris2.tistory.com/796  
+https://luvris2.tistory.com/796 
+### flutter_navigator_data_transfer_example  
+현재 페이지가 Pop될 때, Navigator.Pop에 데이터를 반환하여 이전 페이지에 데이터를 공유해보는 샘플 프로젝트  
+https://luvris2.tistory.com/858  
 
 ## flutter_inappwebview_test
 웹 페이지를 보여주는 웹뷰 라이브러리인 inAppWebView를 사용하여 웹 페이지를 표시하는 샘플 프로젝트  
