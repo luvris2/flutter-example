@@ -87,3 +87,7 @@ flutter_colorpicker 패키지를 이용하여 색상 편집기를 구현하고,
 색상 편집기를 통해 사용자가 여러 가지의 색상을 선택 및 색상값을 업데이트하여  
 사용자가 선택한 색상을 메인 페이지에 표시하는 기능을 구현해보는 샘플 프로젝트  
 https://luvris2.tistory.com/842  
+
+## flutter_partition_screen_move_example
+특정 영역의 화면만 이동하는 방법을 설명하기 위한 샘플 프로젝트  
+https://luvris2.tistory.com/858  
