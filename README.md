@@ -24,9 +24,13 @@ https://luvris2.tistory.com/671
 앱 전반에 뒤로가기 버튼의 기능을 적용할 수 있도록 하는 프로젝트  
 https://luvris2.tistory.com/772  
 
-## flutter_navigator_test
+## Flutter Navigator
+### flutter_navigator_test
 Navigator 클래스를 활용하여 페이지 이동 메소드들을 알아보는 샘플 프로젝트  
-https://luvris2.tistory.com/796  
+https://luvris2.tistory.com/796 
+### flutter_navigator_data_transfer_example  
+현재 페이지가 Pop될 때, Navigator.Pop에 데이터를 반환하여 이전 페이지에 데이터를 공유해보는 샘플 프로젝트  
+https://luvris2.tistory.com/858  
 
 ## flutter_inappwebview_test
 웹 페이지를 보여주는 웹뷰 라이브러리인 inAppWebView를 사용하여 웹 페이지를 표시하는 샘플 프로젝트  
@@ -66,4 +70,24 @@ https://luvris2.tistory.com/821
 ## flutter_carousel_slider_test  
 캐러셀 슬라이드를 이용하여 페이지가 슬라이드 되는 UI를 구성하고  
 캐러셀 인디케이트를 구현하여 현재 페이지의 확인 및 특정 페이지로 빠르게 이동할수 있는 기능을 구현해보는 샘플 프로젝트  
-https://luvris2.tistory.com/824
+https://luvris2.tistory.com/824  
+
+## flutter_class_parameter_value_exchange
+상태 관리 패키지를 사용하지 않고 다른 클래스 간 상태를 공유하고,  
+상태값이 변경되면 연결된 다른 클래스의 상태값을 setState를 이용하여 업데이트하는 것을 직접 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/825  
+
+## flutter_radar_chart_test
+flutter_radar_chart 패키지를 이용하여 레이더 차트를 그려보고  
+레이더 차트의 색상 및 글꼴, 축 표시 방법 등을 커스터마이징하여 사용 방법을 익히는 샘플 프로젝트  
+https://luvris2.tistory.com/837  
+
+## flutter_color_picker_example  
+flutter_colorpicker 패키지를 이용하여 색상 편집기를 구현하고,  
+색상 편집기를 통해 사용자가 여러 가지의 색상을 선택 및 색상값을 업데이트하여  
+사용자가 선택한 색상을 메인 페이지에 표시하는 기능을 구현해보는 샘플 프로젝트  
+https://luvris2.tistory.com/842  
+
+## flutter_partition_screen_move_example
+한 화면에 여러 영역으로 구성된 페이지에서 특정 영역의 화면만 전환하는 방법을 설명하기 위한 샘플 프로젝트  
+https://luvris2.tistory.com/859  
