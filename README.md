@@ -91,3 +91,7 @@ https://luvris2.tistory.com/842
 ## flutter_partition_screen_move_example
 한 화면에 여러 영역으로 구성된 페이지에서 특정 영역의 화면만 전환하는 방법을 설명하기 위한 샘플 프로젝트  
 https://luvris2.tistory.com/859  
+
+## flutter_flutterfire_example
+플러터용 파이어베이스(FlutterFire)를 연동해보는 샘플 프로젝트  
+https://luvris2.tistory.com/839  
